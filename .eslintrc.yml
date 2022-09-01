@@ -1,0 +1,55 @@
+parser: '@typescript-eslint/parser'
+
+extends:
+  - eslint:recommended
+  - 'plugin:@typescript-eslint/recommended'
+  - prettier
+
+parserOptions:
+  ecmaVersion: 2020
+  sourceType: module
+  project: ./tsconfig.json
+
+rules:
+  quotes: 0
+  '@typescript-eslint/quotes':
+    - 1
+    - single
+    - avoidEscape: true
+    -
+  semi: 0
+  '@typescript-eslint/semi':
+    - 1
+    - never
+  '@typescript-eslint/no-explicit-any': 1
+  no-use-before-define: 0
+  '@typescript-eslint/no-use-before-define': 2
+  no-unused-vars: 0
+  '@typescript-eslint/no-unused-vars':
+    - 2
+    - varsIgnorePattern: '^_'
+    - argsIgnorePattern: '^_'
+    - args: 'after-used'
+  '@typescript-eslint/naming-convention':
+    - 1
+    - selector: interface
+      format:
+        - PascalCase
+      custom:
+        regex: '^I[A-Z]'
+        match: false
+  keyword-spacing: 0
+  '@typescript-eslint/keyword-spacing': 2
+  func-call-spacing: 0
+  '@typescript-eslint/func-call-spacing': 2
+  comma-spacing: 0
+  '@typescript-eslint/comma-spacing': 2
+  brace-style: 0
+  '@typescript-eslint/brace-style': 1
+  '@typescript-eslint/prefer-includes': 1
+  '@typescript-eslint/prefer-optional-chain': 1
+  '@typescript-eslint/type-annotation-spacing': 2
+  require-await: 0
+  '@typescript-eslint/require-await': 2
+  return-await: 0
+  '@typescript-eslint/return-await': 1

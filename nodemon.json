@@ -1,0 +1,7 @@
+{
+  "ignore": [".git", ".yarn", "dist"],
+  "verbose": true,
+  "watch": ["lib/"],
+  "exec": "node --inspect=4141 -r ts-node/register ./lib/index.ts",
+  "ext": "ts,json"
+}
