@@ -16,7 +16,6 @@ rules:
     - 1
     - single
     - avoidEscape: true
-    -
   semi: 0
   '@typescript-eslint/semi':
     - 1
